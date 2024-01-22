@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #111;
+}
+
+.fire-container {
+    position: relative;
+    width: 200px;
+    height: 300px;
+}
+
+.fire {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 200px;
+    background: url('fire.png') center bottom / cover no-repeat;
+    animation: fireAnimation 1s infinite alternate;
+}
+
+.logs {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 20px;
+    background-color: #4b2e00;
+}
+
+@keyframes fireAnimation {
+    0% {
+        transform: translateX(-50%) scaleY(1);
+    }
+    100% {
+        transform: translateX(-50%) scaleY(1.1);
+    }
+}
